@@ -24,7 +24,7 @@ exports.createUser = async (req, res) => {
         }
        
         //Validation for all fields
-        if (!isValid(title)) return res.status(404).send({ status: false, message: "title missing" })
+        if (!isValid(title)) return res.status(400).send({ status: false, message: "title missing" })
 
         let validTitle = ['Mr', 'Mrs', 'Miss']; //validating the title
 
